@@ -29,21 +29,19 @@ def download_youtube_videos():
         i += 1
 
 #Edit The Videos
+#.subclip(60, 70) python will delete any portion of video before 60 secs and after 70 secs
+#this will leave you with a 10 sec video. the video duration should always be in secs. 
 def edit_videos():
     l_files = os.listdir("scenes")
     for file in l_files:
-        clip1 = VideoFileClip(f"scenes/scene1.mp4").subclip(78, 81).fx( vfx.colorx, 1.0)
-        clip2 = VideoFileClip(f"scenes/scene2.mp4").subclip(23, 25).fx( vfx.colorx, 1.0)
-        clip3 = VideoFileClip(f"scenes/scene3.mp4").subclip(146, 157).fx( vfx.colorx, 1.0)
-        clip4 = VideoFileClip(f"scenes/scene4.mp4").subclip(67, 70).fx( vfx.colorx, 1.0)
-        clip5 = VideoFileClip(f"scenes/scene5.mp4").subclip(100, 104).fx( vfx.colorx, 1.0)
-        clip6 = VideoFileClip(f"scenes/scene6.mp4").subclip(59, 62).fx( vfx.colorx, 1.0)
-        clip7 = VideoFileClip(f"scenes/scene7.mp4").subclip(164, 170).fx( vfx.colorx, 1.0)
-        clips = (clip1, clip2, clip3, clip4, clip5, clip6, clip7)
+        clip1 = VideoFileClip(f"scenes/scene1.mp4").subclip(, ).fx( vfx.colorx, 1.0) #In seconds specify the clip that needs to be cut out of video downloaded
+        clip2 = VideoFileClip(f"scenes/scene2.mp4").subclip(, ).fx( vfx.colorx, 1.0)
+        clip3 = VideoFileClip(f"scenes/scene3.mp4").subclip(, ).fx( vfx.colorx, 1.0)
+        clips = (clip1, clip2, clip3)
         
         
-    final_clip_without_music = concatenate_videoclips(clips, method="compose")
-    final_clip_without_music.write_videofile("final_video_without_music.mp4")
+    final_clip = concatenate_videoclips(clips, method="compose")
+    final_clip.write_videofile("final_video.mp4")
         
 
     
