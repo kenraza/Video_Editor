@@ -4,4 +4,5 @@ many videos were downloaded. Then python accesses the scenes folder and edits ea
 the final_video.mp4.
 The Converter_videotoaudio python file in this project was used to turn a video file(.mp4) to an audio file(.mp3).
 Both of these python files use the same list_scenes.json to specify Youtube videos to download and then Edit. 
-The list_scene.json needs to be edited everytime in order to specify which Youtube Video needs to be downloaded.
+The list_scenes.json needs to be edited everytime in order to specify which Youtube Video needs to be downloaded.
+The number of Videos to download can be changed by adding more values to the list_scenes.json.
